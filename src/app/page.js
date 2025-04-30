@@ -1,26 +1,27 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaGithub, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const socialLinks = [
     {
         name: 'GitHub',
         url: 'https://github.com/pavangudiwada',
-        icon: '🐙'
+        icon: FaGithub
     },
     {
         name: 'YouTube',
         url: 'https://youtube.com/@pavangudiwada_',
-        icon: '📺'
+        icon: FaYoutube
     },
     {
         name: 'Twitter',
         url: 'https://twitter.com/pavangudiwada',
-        icon: '🐦'
+        icon: FaTwitter
     },
     {
         name: 'LinkedIn',
         url: 'https://linkedin.com/in/pavangudiwada',
-        icon: '💼'
+        icon: FaLinkedin
     }
 ];
 
@@ -32,8 +33,8 @@ export default function Home() {
                     <Image
                         src="/profile.jpg"
                         alt="Pavan Gudiwada"
-                        width={200}
-                        height={200}
+                        width={150}
+                        height={150}
                         className="profile-image"
                         priority
                     />
@@ -53,9 +54,9 @@ export default function Home() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"
+                            title={link.name}
                         >
-                            <span className="social-icon">{link.icon}</span>
-                            <span className="social-name">{link.name}</span>
+                            <link.icon className="social-icon" />
                         </a>
                     ))}
                 </div>

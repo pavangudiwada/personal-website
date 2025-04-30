@@ -1,22 +1,17 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css';
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
-    title: "Pavan Gudiwada - Personal Website",
-    description: "Personal website of Pavan Gudiwada",
+    title: 'Pavan Gudiwada',
+    description: 'Developer Advocate at Robusta.dev',
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body>
                 <Navbar />
-                <main className="main">
-                    {children}
-                </main>
+                {children}
             </body>
         </html>
     );

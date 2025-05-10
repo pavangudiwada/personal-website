@@ -40,25 +40,32 @@ const workItems = [
         link: "https://home.robusta.dev/blog/switching-kubernets-context"
     },
     {
+        title: "3 Steps To Minimize Alert Fatigue When Using Prometheus",
+        description: "Practical guide to reduce alert noise and improve alert effectiveness in Prometheus",
+        category: "blogs",
+        year: "2024",
+        link: "https://home.robusta.dev/blog/3-steps-to-minimize-alert-fatigue-when-using-prometheus"
+    },
+    {
+        title: "Prometheus On Kubernetes",
+        description: "Comprehensive guide to understanding Prometheus components and Kube Prometheus stack",
+        category: "blogs",
+        year: "2024",
+        link: "https://home.robusta.dev/blog/prometheus-on-kubernetes"
+    },
+    {
+        title: "3 Common Mistakes with PromQL and Kubernetes Metrics",
+        description: "Troubleshooting guide for common PromQL query pitfalls in Kubernetes monitoring",
+        category: "blogs",
+        year: "2023",
+        link: "https://home.robusta.dev/blog/3-common-mistakes-with-promql-and-kubernetes-metrics"
+    },
+    {
         title: "Practical Kubernetes monitoring with Prometheus and Grafana",
         description: "Comprehensive guide to setting up Kubernetes monitoring",
         category: "blogs",
         year: "2023",
         link: "https://kubecampus.io/kubernetes/blog/practical-kubernetes-monitoring-with-prometheus-and-grafana/"
-    },
-    {
-        title: "Hashnode Blog",
-        description: "Collection of technical articles on Kubernetes, DevOps, and Cloud Native technologies",
-        category: "blogs",
-        year: "2024",
-        link: "https://pavangudiwada.hashnode.dev/"
-    },
-    {
-        title: "Medium Blog",
-        description: "Articles and tutorials on DevOps practices and cloud technologies",
-        category: "blogs",
-        year: "2024",
-        link: "https://pavangudiwada.medium.com/"
     },
     {
         title: "Why This Kubernetes Thing?",
@@ -101,13 +108,6 @@ const workItems = [
         category: "videos",
         year: "2023",
         link: "https://www.youtube.com/watch?v=siH-B5bOoIU"
-    },
-    {
-        title: "Complete Video Collection",
-        description: "Playlist with all DevOps and Kubernetes related videos",
-        category: "videos",
-        year: "2024",
-        link: "https://www.youtube.com/watch?v=RP6bW-EevX0&list=PLfbj6mkGIOYtD_vaMI65tqzvHPRTcpBD_"
     }
 ];
 

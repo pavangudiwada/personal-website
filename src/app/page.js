@@ -39,13 +39,13 @@ export default function Home() {
                         priority
                     />
                 </div>
-                <h1 className="home-title">Pavan Gudiwada</h1>
+                <h1 className="home-title">Hey, I'm Pavan Gudiwada</h1>
                 <p className="home-subtitle">
-                    Developer Advocate at Robusta.dev
+                    I love everything Tech, Open Source and DevRel
                 </p>
-                <p className="home-subtitle">
+                {/* <p className="home-subtitle">
                     FOSS, Open Source, DevOps, Python, Developer Advocacy, Linux, Blogging, Digital Privacy, Art
-                </p>
+                </p> */}
                 <div className="social-links">
                     {socialLinks.map((link) => (
                         <a

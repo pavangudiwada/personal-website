@@ -334,3 +334,21 @@ body {
     text-align: center;
   }
 }
+
+/* Work page year sections */
+.year-section {
+  margin-bottom: 3rem;
+}
+
+.year-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.work-content {
+  margin-top: 2rem;
+}

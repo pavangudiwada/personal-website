@@ -7,7 +7,7 @@ const categories = [
     { id: 'blogs', label: 'Blogs', icon: FaNewspaper },
     { id: 'videos', label: 'Videos', icon: FaYoutube },
     { id: 'talks', label: 'Talks', icon: FaMicrophone },
-    { id: 'newsletter', label: 'Newsletter', icon: FaNewspaper },
+    { id: 'others', label: 'Others', icon: FaNewspaper },
 ];
 
 const workItems = [
@@ -70,7 +70,7 @@ const workItems = [
     {
         title: "Why This Kubernetes Thing?",
         description: "No fluff, bite-sized newsletter about Kubernetes concepts",
-        category: "newsletter",
+        category: "others",
         year: "2024",
         link: "https://whyk8s.substack.com/"
     },
@@ -137,6 +137,18 @@ export default function Work() {
         activeCategory === 'all' || item.category === activeCategory
     );
 
+    // Group work items by year
+    const workByYear = filteredWork.reduce((acc, item) => {
+        if (!acc[item.year]) {
+            acc[item.year] = [];
+        }
+        acc[item.year].push(item);
+        return acc;
+    }, {});
+
+    // Sort years in descending order
+    const sortedYears = Object.keys(workByYear).sort((a, b) => b - a);
+
     return (
         <div className="work-container">
             <div className="work-header">
@@ -157,9 +169,16 @@ export default function Work() {
                 ))}
             </div>
 
-            <div className="work-grid">
-                {filteredWork.map((item, index) => (
-                    <WorkCard key={index} item={item} />
+            <div className="work-content">
+                {sortedYears.map(year => (
+                    <div key={year} className="year-section">
+                        <h2 className="year-header">{year}</h2>
+                        <div className="work-grid">
+                            {workByYear[year].map((item, index) => (
+                                <WorkCard key={index} item={item} />
+                            ))}
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

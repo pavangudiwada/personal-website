@@ -18,7 +18,7 @@ const socialLinks = [
 
 export default function Contact() {
     return (
-        <div className="contact-container" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center' }}>
+        <div className="contact-container" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center', marginTop: '70px' }}>
             <img
                 src="/images/pavangudiwada_profilepic.jpg"
                 alt="Pavan Gudiwada"
@@ -64,4 +64,4 @@ export default function Contact() {
             </div>
         </div>
     );
-} 
+}

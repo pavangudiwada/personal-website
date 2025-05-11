@@ -108,6 +108,62 @@ const workItems = [
         category: "videos",
         year: "2023",
         link: "https://www.youtube.com/watch?v=siH-B5bOoIU"
+    },
+    {
+        title: "Simple Docker Project - Part 2",
+        description: "WordPress+MySQL using Docker Compose. Automate your WordPress site setup with Docker Compose.",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/simple-docker-project-part-2"
+    },
+    {
+        title: "WordPress + MySQL = Simple Docker Project",
+        description: "Let's practice Docker together with a simple project: WordPress and MySQL.",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/wordpress-mysql-simple-docker-project"
+    },
+    {
+        title: "Create and Push a Git Repo to Github in minutes!!",
+        description: "Git is complicated no more! Learn to create and push your first GitHub repo quickly.",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/create-and-push-a-git-repo-to-github-in-minutes"
+    },
+    {
+        title: "Host your Golang app on Azure App Services using Docker",
+        description: "How to host your Golang app on Azure App Services using Docker.",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/host-your-golang-app-on-azure-app-services-using-docker"
+    },
+    {
+        title: "Access an Azure VM via RDP from Linux using Remmina",
+        description: "Connect to an Azure VM using RDP from Linux with Remmina.",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/access-an-azure-vm-via-rdp-from-linux-using-remmina"
+    },
+    {
+        title: "Personal Access Token - Azure DevOps",
+        description: "Using PAT to connect Azure DevOps with other tools. What is PAT and how to use it.",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/personal-access-token-azure-devops"
+    },
+    {
+        title: "AppWrite: Open Source Backend server, a non-developer's review",
+        description: "What I like, why I like them and what I like to see improved in the project. Appwrite is an Open-Source Backend server that can run as a Docker...",
+        category: "blogs",
+        year: "2022",
+        link: "https://pavangudiwada.hashnode.dev/appwrite-open-source-backend-server-a-non-developers-review"
+    },
+    {
+        title: "Self-hosted Linux Agent on Azure DevOps in 5 minutes!!",
+        description: "Yes! you don't have to pay for Microsoft hosted Agents or get a new server to work/practice. Use your own Linux machine instead!",
+        category: "blogs",
+        year: "2021",
+        link: "https://pavangudiwada.hashnode.dev/self-hosted-linux-agent-on-azure-devops-in-5-minutes"
     }
 ];
 

@@ -93,8 +93,8 @@ body {
 
 .profile-image-container {
   margin: 0 auto 1rem;
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--primary-color);

@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaGithub, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const socialLinks = [
@@ -16,7 +15,7 @@ const socialLinks = [
     },
     {
         name: 'Twitter',
-        url: 'https://twitter.com/pavangudiwada',
+        url: 'https://twitter.com/pavangudiwada_',
         icon: FaTwitter
     },
     {
@@ -31,13 +30,10 @@ export default function Home() {
         <div className="home-container">
             <div className="profile-section">
                 <div className="profile-image-container">
-                    <Image
-                        src="/profile.jpg"
+                    <img
+                        src="/images/pavangudiwada_profilepic.jpg"
                         alt="Pavan Gudiwada"
-                        width={150}
-                        height={150}
                         className="profile-image"
-                        priority
                     />
                 </div>
                 <h1 className="home-title">Pavan Gudiwada</h1>

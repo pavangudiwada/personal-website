@@ -26,7 +26,7 @@ export default function Contact() {
                 style={{ width: 120, height: 120, borderRadius: '50%', margin: '0 auto 1rem', objectFit: 'cover' }}
             />
             <h2 style={{ fontWeight: 700, fontSize: '2rem', marginBottom: 0 }}>
-                Pavan Gudiwada <span style={{ color: '#0099ff', fontSize: '1.2rem' }}>✔</span>
+                Pavan Gudiwada
             </h2>
             <div style={{ color: '#222', margin: '0.5rem 0 1.5rem', fontSize: '1.1rem' }}>
                 Tech, Open Source, and DevRel

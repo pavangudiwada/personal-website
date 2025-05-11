@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaGithub, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
@@ -39,9 +40,9 @@ export default function Home() {
                         priority
                     />
                 </div>
-                <h1 className="home-title">Hey, I'm Pavan Gudiwada</h1>
+                <h1 className="home-title">Pavan Gudiwada</h1>
                 <p className="home-subtitle">
-                    I love everything Tech, Open Source and DevRel
+                    Tech, Open Source and DevRel
                 </p>
                 {/* <p className="home-subtitle">
                     FOSS, Open Source, DevOps, Python, Developer Advocacy, Linux, Blogging, Digital Privacy, Art

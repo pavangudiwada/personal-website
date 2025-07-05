@@ -80,14 +80,14 @@ const workItems = [
         title: "What does Prometheus scraping mean and how does it work?",
         description: "Video explanation of Prometheus scraping mechanism",
         category: "videos",
-        year: "2024",
+        year: "2025",
         link: "https://www.linkedin.com/posts/pavangudiwada_what-does-prometheus-scraping-mean-and-how-activity-7296555205838393344-EiQS"
     },
     {
         title: "Learn how Prometheus works in 2 minutes",
         description: "Quick video guide to understanding Prometheus",
         category: "videos",
-        year: "2024",
+        year: "2025",
         link: "https://www.linkedin.com/posts/pavangudiwada_learn-how-prometheus-works-in-2-minutes-activity-7294752532961050625-4PwK"
     },
     // Newsletter
@@ -97,6 +97,27 @@ const workItems = [
         category: "others",
         year: "2024",
         link: "https://whyk8s.substack.com"
+    },
+    {
+        title: "Kubernetes Guides",
+        description: "One page diagrams explaining concepts in Kubernetes",
+        category: "others",
+        year: "2024",
+        link: "https://github.com/pavangudiwada/kubernetesguides"
+    },
+    {
+        title: "Hello DevOps Project",
+        description: "Hands-on DevOps learning project - More doing, less reading. For people with theoretical DevOps knowledge and beginners",
+        category: "others",
+        year: "2023",
+        link: "https://github.com/robusta-dev/Hello-DevOps-Project"
+    },
+    {
+        title: "PrometheusRule Editor",
+        description: "A web UI to create PrometheusRules on Kubernetes. Supports kube-prometheus-stack and the Prometheus operator",
+        category: "others",
+        year: "2024",
+        link: "https://github.com/robusta-dev/prometheus-operator-ui"
     },
     // Blogs - Your content
     {

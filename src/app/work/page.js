@@ -14,63 +14,63 @@ const workItems = [
     // Talks
     {
         title: "Managing Alerts at Scale: Practical Tips to Reduce Alert Fatigue",
-        description: "Community meetup talk at CNCF Lucknow",
+        description: "Talk at CNCF Lucknow meetup about managing Prometheus alerts at scale",
         category: "talks",
         year: "2025",
         link: "https://x.com/cncglucknow/status/1927261542304686226"
     },
     {
         title: "𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗗𝗲𝘃𝗢𝗽𝘀 𝗖𝗼-𝗣𝗶𝗹𝗼𝘁 𝘂𝘀𝗶𝗻𝗴 𝗛𝗼𝗹𝗺𝗲𝘀 𝗚𝗣𝗧",
-        description: "Speaking at FSMK Dev Days about free software and open source",
+        description: "Speaking at Free Software Movement Karnataka (FSMK) DevDays about building DevOps co-pilot with AI",
         category: "talks",
         year: "2025",
         link: "https://www.linkedin.com/posts/pavangudiwada_fsmkdevdays-freesoftware-opensource-activity-7285328874886901760-ZV9i"
     },
     {
         title: "OpenSource AI agents",
-        description: "Community meetup talk at CNCF Ahmedabad",
+        description: "Talk at CNCF Ahmedabad meetup about open source AI agents for DevOps",
         category: "talks",
         year: "2025",
         link: "https://www.linkedin.com/posts/pavangudiwada_had-a-great-time-attending-and-speaking-at-activity-7276158792235409408-rtty"
     },
     {
         title: "AI Driven Developer Experience for Kubernetes",
-        description: "Talk with Iview Labs",
+        description: "Talk at Iview Labs about improving Kubernetes developer experience using AI",
         category: "talks",
         year: "2024",
         link: "https://www.linkedin.com/posts/pavangudiwada_kubernetes-ai-developerexperience-activity-7239117047090036736-2kVT"
     },
     {
         title: "HolmesGPT - The Open Source On-Call/DevOps Agent",
-        description: "Speaking at Collabnix Docker community meetup",
+        description: "Speaking at Collabnix Docker Meetup about HolmesGPT and open source DevOps automation",
         category: "talks",
         year: "2024",
         link: "https://www.linkedin.com/posts/ajeetsraina_opensource-devops-kubernetes-activity-7229002694198239232-nQkx"
     },
     {
         title: "Troubleshooting Prometheus Alerts Faster Using Open Source AI Agents",
-        description: "Community tech meetup at CNCF Hyderabad",
+        description: "Talk at CNCF Hyderabad meetup about using AI to troubleshoot Prometheus alerts",
         category: "talks",
         year: "2024",
         link: "https://www.linkedin.com/posts/cncf-hyderabad_cncfhyderabad-techmeetup-community-activity-7222850817555324928-lhC9"
     },
     {
         title: "Responding to Incidents Faster Using Open Source AI Agents",
-        description: "Speaking at Bangalore SRE meetup",
+        description: "Talk at Bangalore SRE Meetup about using AI agents for faster incident response",
         category: "talks",
         year: "2024",
         link: "https://www.linkedin.com/posts/pavangudiwada_bangalore-sre-july-month-meetup-sat-jul-activity-7217009452099493888-tS4-"
     },
     {
         title: "Prometheus in 5 minutes - KCD Pakistan 2023",
-        description: "Quick introduction to Prometheus monitoring",
+        description: "Talk at KCD Pakistan about Prometheus monitoring fundamentals",
         category: "talks",
         year: "2023",
         link: "https://www.youtube.com/watch?v=I6C09vPBpiA"
     },
     {
         title: "Kubernetes-as-a-Service - Ortelius Summit 2022",
-        description: "Discussion about whether Kubernetes-as-a-Service is better for you",
+        description: "Talk at Ortelius Summit about Kubernetes-as-a-Service benefits and considerations",
         category: "talks",
         year: "2022",
         link: "https://www.youtube.com/watch?v=5i1TQEb7c90"

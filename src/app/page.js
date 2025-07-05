@@ -53,7 +53,7 @@ export default function Home() {
                             className="social-link"
                             title={link.name}
                         >
-                            <link.icon className="social-icon" />
+                            <link.icon className="social-icon" suppressHydrationWarning />
                         </a>
                     ))}
                 </div>

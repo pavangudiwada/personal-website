@@ -11,40 +11,107 @@ const categories = [
 ];
 
 const workItems = [
+    // Talks
+    {
+        title: "Managing Alerts at Scale: Practical Tips to Reduce Alert Fatigue",
+        description: "Community meetup talk at CNCF Lucknow",
+        category: "talks",
+        year: "2025",
+        link: "https://x.com/cncglucknow/status/1927261542304686226"
+    },
+    {
+        title: "𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗗𝗲𝘃𝗢𝗽𝘀 𝗖𝗼-𝗣𝗶𝗹𝗼𝘁 𝘂𝘀𝗶𝗻𝗴 𝗛𝗼𝗹𝗺𝗲𝘀 𝗚𝗣𝗧",
+        description: "Speaking at FSMK Dev Days about free software and open source",
+        category: "talks",
+        year: "2025",
+        link: "https://www.linkedin.com/posts/pavangudiwada_fsmkdevdays-freesoftware-opensource-activity-7285328874886901760-ZV9i"
+    },
+    {
+        title: "OpenSource AI agents",
+        description: "Community meetup talk at CNCF Ahmedabad",
+        category: "talks",
+        year: "2025",
+        link: "https://www.linkedin.com/posts/pavangudiwada_had-a-great-time-attending-and-speaking-at-activity-7276158792235409408-rtty"
+    },
+    {
+        title: "AI Driven Developer Experience for Kubernetes",
+        description: "Talk with Iview Labs",
+        category: "talks",
+        year: "2024",
+        link: "https://www.linkedin.com/posts/pavangudiwada_kubernetes-ai-developerexperience-activity-7239117047090036736-2kVT"
+    },
+    {
+        title: "HolmesGPT - The Open Source On-Call/DevOps Agent",
+        description: "Speaking at Collabnix Docker community meetup",
+        category: "talks",
+        year: "2024",
+        link: "https://www.linkedin.com/posts/ajeetsraina_opensource-devops-kubernetes-activity-7229002694198239232-nQkx"
+    },
+    {
+        title: "Troubleshooting Prometheus Alerts Faster Using Open Source AI Agents",
+        description: "Community tech meetup at CNCF Hyderabad",
+        category: "talks",
+        year: "2024",
+        link: "https://www.linkedin.com/posts/cncf-hyderabad_cncfhyderabad-techmeetup-community-activity-7222850817555324928-lhC9"
+    },
+    {
+        title: "Responding to Incidents Faster Using Open Source AI Agents",
+        description: "Speaking at Bangalore SRE meetup",
+        category: "talks",
+        year: "2024",
+        link: "https://www.linkedin.com/posts/pavangudiwada_bangalore-sre-july-month-meetup-sat-jul-activity-7217009452099493888-tS4-"
+    },
+    {
+        title: "Prometheus in 5 minutes - KCD Pakistan 2023",
+        description: "Quick introduction to Prometheus monitoring",
+        category: "talks",
+        year: "2023",
+        link: "https://www.youtube.com/watch?v=I6C09vPBpiA"
+    },
+    {
+        title: "Kubernetes-as-a-Service - Ortelius Summit 2022",
+        description: "Discussion about whether Kubernetes-as-a-Service is better for you",
+        category: "talks",
+        year: "2022",
+        link: "https://www.youtube.com/watch?v=5i1TQEb7c90"
+    },
+    // Content Videos
+    {
+        title: "What does Prometheus scraping mean and how does it work?",
+        description: "Video explanation of Prometheus scraping mechanism",
+        category: "videos",
+        year: "2024",
+        link: "https://www.linkedin.com/posts/pavangudiwada_what-does-prometheus-scraping-mean-and-how-activity-7296555205838393344-EiQS"
+    },
+    {
+        title: "Learn how Prometheus works in 2 minutes",
+        description: "Quick video guide to understanding Prometheus",
+        category: "videos",
+        year: "2024",
+        link: "https://www.linkedin.com/posts/pavangudiwada_learn-how-prometheus-works-in-2-minutes-activity-7294752532961050625-4PwK"
+    },
+    // Newsletter
+    {
+        title: "Why This Kubernetes Thing?",
+        description: "No fluff, bite-sized newsletter about Kubernetes concepts with Natan Yellin",
+        category: "others",
+        year: "2024",
+        link: "https://whyk8s.substack.com"
+    },
+    // Blogs - Your content
     {
         title: "Pure GitOps: How to Create ArgoCD Applications without the UI",
         description: "Learn how to manage ArgoCD applications using GitOps principles",
         category: "blogs",
-        year: "2024",
+        year: "2023",
         link: "https://home.robusta.dev/blog/pure-gitops-how-to-create-argocd-applications-without-the-ui"
     },
     {
-        title: "How are Prometheus alerts configured on Kubernetes",
-        description: "Deep dive into Prometheus alert configuration with prometheus-community/prometheus",
-        category: "blogs",
-        year: "2023",
-        link: "https://home.robusta.dev/blog/prometheus-alerts-using-prometheus-community-helm-chart"
-    },
-    {
-        title: "Four ways pods suddenly stop running on Kubernetes",
-        description: "Common scenarios and solutions for pod failures in Kubernetes",
-        category: "blogs",
-        year: "2023",
-        link: "https://home.robusta.dev/blog/oomkill-crashloops-evictions"
-    },
-    {
-        title: "Best three tools for working with many Kubernetes contexts",
-        description: "Essential tools for managing multiple Kubernetes contexts efficiently",
-        category: "blogs",
-        year: "2023",
-        link: "https://home.robusta.dev/blog/switching-kubernets-context"
-    },
-    {
-        title: "3 Steps To Minimize Alert Fatigue When Using Prometheus",
+        title: "3 Steps To Minimize Alert Fatigue",
         description: "Practical guide to reduce alert noise and improve alert effectiveness in Prometheus",
         category: "blogs",
         year: "2024",
-        link: "https://home.robusta.dev/blog/3-steps-to-minimize-alert-fatigue-when-using-prometheus"
+        link: "https://home.robusta.dev/blog/3-steps-to-minimize-alert-fatigue"
     },
     {
         title: "Prometheus On Kubernetes",
@@ -54,68 +121,34 @@ const workItems = [
         link: "https://home.robusta.dev/blog/prometheus-on-kubernetes"
     },
     {
-        title: "3 Common Mistakes with PromQL and Kubernetes Metrics",
-        description: "Troubleshooting guide for common PromQL query pitfalls in Kubernetes monitoring",
+        title: "Prometheus alerts using Prometheus Community Helm Chart",
+        description: "Deep dive into Prometheus alert configuration with prometheus-community/prometheus",
         category: "blogs",
         year: "2023",
-        link: "https://home.robusta.dev/blog/3-common-mistakes-with-promql-and-kubernetes-metrics"
+        link: "https://home.robusta.dev/blog/prometheus-alerts-using-prometheus-community-helm-chart"
+    },
+    {
+        title: "OOMKill, CrashLoops, Evictions",
+        description: "Common scenarios and solutions for pod failures in Kubernetes",
+        category: "blogs",
+        year: "2022",
+        link: "https://home.robusta.dev/blog/oomkill-crashloops-evictions"
+    },
+    {
+        title: "Switching Kubernetes Context",
+        description: "Essential tools for managing multiple Kubernetes contexts efficiently",
+        category: "blogs",
+        year: "2022",
+        link: "https://home.robusta.dev/blog/switching-kubernets-context"
     },
     {
         title: "Practical Kubernetes monitoring with Prometheus and Grafana",
         description: "Comprehensive guide to setting up Kubernetes monitoring",
         category: "blogs",
-        year: "2023",
-        link: "https://kubecampus.io/kubernetes/blog/practical-kubernetes-monitoring-with-prometheus-and-grafana/"
-    },
-    {
-        title: "Why This Kubernetes Thing?",
-        description: "No fluff, bite-sized newsletter about Kubernetes concepts",
-        category: "others",
-        year: "2024",
-        link: "https://whyk8s.substack.com/"
-    },
-    {
-        title: "Prometheus in 5 minutes - KCD Pakistan 2023",
-        description: "Quick introduction to Prometheus monitoring",
-        category: "videos",
-        year: "2023",
-        link: "https://www.youtube.com/watch?v=I6C09vPBpiA"
-    },
-    {
-        title: "Kubernetes-as-a-Service - Ortelius Summit 2022",
-        description: "Discussion about whether Kubernetes-as-a-Service is better for you",
-        category: "videos",
         year: "2022",
-        link: "https://www.youtube.com/watch?v=5i1TQEb7c90"
+        link: "https://www.veeam.com/blog/practical-kubernetes-monitoring-prometheus-grafana.html"
     },
-    {
-        title: "Kubernetes monitoring with Robusta - Kubesimplify",
-        description: "CloudNative stories featuring Kubernetes monitoring best practices",
-        category: "videos",
-        year: "2023",
-        link: "https://www.youtube.com/watch?v=RP6bW-EevX0"
-    },
-    {
-        title: "Understand Terraform Cloud and Enterprise capabilities",
-        description: "Terraform HUG Sydney session with Brad McCoy",
-        category: "videos",
-        year: "2023",
-        link: "https://www.youtube.com/watch?v=8JSTKHxkLTM"
-    },
-    {
-        title: "Kubernetes Monitoring 101 with Prometheus",
-        description: "Introduction to Kubernetes monitoring fundamentals",
-        category: "videos",
-        year: "2023",
-        link: "https://www.youtube.com/watch?v=siH-B5bOoIU"
-    },
-    {
-        title: "Simple Docker Project - Part 2",
-        description: "WordPress+MySQL using Docker Compose. Automate your WordPress site setup with Docker Compose.",
-        category: "blogs",
-        year: "2022",
-        link: "https://pavangudiwada.hashnode.dev/simple-docker-project-part-2"
-    },
+    // Hashnode Blogs
     {
         title: "WordPress + MySQL = Simple Docker Project",
         description: "Let's practice Docker together with a simple project: WordPress and MySQL.",

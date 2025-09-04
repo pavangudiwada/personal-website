@@ -20,7 +20,7 @@ export default function Contact() {
     return (
         <div className="contact-container" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center', marginTop: '70px' }}>
             <img
-                src="/images/pavangudiwada_profilepic.jpg"
+                src="/images/pavangudiwada_pfp.webp"
                 alt="Pavan Gudiwada"
                 className="profile-image"
                 style={{ width: 120, height: 120, borderRadius: '50%', margin: '0 auto 1rem', objectFit: 'cover' }}

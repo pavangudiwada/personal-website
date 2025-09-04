@@ -31,7 +31,7 @@ export default function Home() {
             <div className="profile-section">
                 <div className="profile-image-container">
                     <img
-                        src="/images/pavangudiwada_profilepic.jpg"
+                        src="/images/pavangudiwada_pfp.webp"
                         alt="Pavan Gudiwada"
                         className="profile-image"
                     />

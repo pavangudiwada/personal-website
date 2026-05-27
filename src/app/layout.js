@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
-    title: 'Pavan Gudiwada | Developer Marketing, AI SRE, Agent Experiments',
-    description: 'Personal website of Pavan Gudiwada: product marketing for devtools, AI SRE research, Hermes agent experiments, talks, writing, and videos.',
+    title: 'Pavan Gudiwada | Developer Marketing, Product Marketing, Open Source',
+    description: 'Personal website of Pavan Gudiwada: developer marketing, product marketing for devtools, open source, AI SRE research, talks, writing, and videos.',
     icons: {
         icon: '/favicon.ico',
     },

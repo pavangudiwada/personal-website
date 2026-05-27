@@ -68,9 +68,9 @@ a { color: inherit; }
 .contact-card h1,
 .case-hero h1 {
   margin: 0;
-  font-size: clamp(3.6rem, 10.5vw, 8rem);
-  line-height: 0.88;
-  letter-spacing: -0.085em;
+  font-size: clamp(3.3rem, 9.2vw, 7.2rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 .hero-lede,
 .work-header p,
@@ -318,7 +318,7 @@ a { color: inherit; }
   padding: 3.25rem 0;
   border-bottom: 1px solid var(--line);
 }
-.case-two-up h2 { font-size: clamp(1.45rem, 3vw, 2.4rem); }
+.case-two-up h2 { font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.18; letter-spacing: -0.025em; }
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -342,6 +342,20 @@ a { color: inherit; }
   align-items: start;
 }
 .gallery-card { margin: 0; padding: 0.65rem; overflow: hidden; }
+.gallery-card a { display: block; position: relative; text-decoration: none; }
+.version-badge {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  z-index: 2;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.88);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
 .gallery-image {
   width: 100%;
   height: auto;
@@ -351,6 +365,7 @@ a { color: inherit; }
   background: var(--surface-soft);
 }
 .gallery-card figcaption { padding: 0.7rem 0.35rem 0.25rem; font-size: 0.92rem; }
+.gallery-card:hover .gallery-image { border-color: var(--accent); }
 .compact-row { grid-template-columns: 42px minmax(0, 1fr); align-items: start; }
 .compact-row p { margin: 0; }
 

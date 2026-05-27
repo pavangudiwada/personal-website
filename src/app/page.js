@@ -15,21 +15,21 @@ const socialLinks = [
 const proofLoops = [
     {
         number: '01',
-        title: 'Devtool PMM',
-        body: 'I turn technical products into proof-led positioning, demos, launch assets, and useful content.',
-        meta: 'Technical PMM · devtools · demos'
+        title: 'Developer marketing',
+        body: 'I turn technical products into clear demos, launches, teardown briefs, and content developers can trust.',
+        meta: 'devtools · docs · demos'
     },
     {
         number: '02',
-        title: 'AI SRE Watchlist',
-        body: 'Tracking what is shipping across RCA, incident response, alert triage, and autonomous reliability tools.',
-        meta: '60+ tools · research · analysis'
+        title: 'Product marketing',
+        body: 'Positioning, messaging, proof assets, and launch narratives for technical products.',
+        meta: 'Technical PMM · PMM · GTM'
     },
     {
         number: '03',
-        title: 'Agent experiments',
-        body: 'Building a personal operating layer with Hermes, Obsidian, skills, MCP tools, and design-agent workflows.',
-        meta: 'Hermes · Mobbin · Pencil · Obsidian'
+        title: 'Open source',
+        body: 'Talks, guides, community work, and AI SRE research grounded in real DevOps and Kubernetes experience.',
+        meta: 'OSS · AI SRE · Kubernetes'
     }
 ];
 
@@ -69,10 +69,10 @@ export default function Home() {
         <main className="site-shell">
             <section className="profile-hero">
                 <div className="hero-left">
-                    <p className="eyebrow">Product marketing · AI SRE · agent workflows</p>
+                    <p className="eyebrow">Developer marketing · product marketing · open source</p>
                     <h1>Pavan Gudiwada</h1>
                     <p className="hero-lede">
-                        I work on developer marketing, AI SRE research, and agent-assisted workflows. The common thread is simple: explain technical products with real proof, useful demos, and practitioner-level clarity.
+                        I work on developer marketing for technical products: demos, launches, teardown briefs, open-source storytelling, and product marketing that proves the point instead of overexplaining it.
                     </p>
                     <div className="hero-actions">
                         <Link href="/work" className="primary-button">Browse work</Link>
@@ -90,8 +90,8 @@ export default function Home() {
                     />
                     <div>
                         <p className="card-kicker">Available for</p>
-                        <h2>Devtool product storytelling</h2>
-                        <p>Positioning, proof-led demos, launch narratives, AI SRE research, and agent workflow experiments.</p>
+                        <h2>Developer marketing for devtools</h2>
+                        <p>Demos, launches, docs-adjacent content, OSS narratives, and proof-led product marketing.</p>
                     </div>
                     <div className="social-links">
                         {socialLinks.map((link) => (
@@ -106,7 +106,7 @@ export default function Home() {
             <section className="section-block">
                 <div className="section-heading compact-heading">
                     <p className="eyebrow">Current proof loops</p>
-                    <h2>Not a portfolio grid. A working system.</h2>
+                    <h2>What I do.</h2>
                 </div>
                 <div className="proof-list">
                     {proofLoops.map((loop) => (
@@ -125,18 +125,18 @@ export default function Home() {
             <section className="section-block split-section">
                 <div>
                     <p className="eyebrow">How I work</p>
-                    <h2>Research → brief → proof → asset.</h2>
+                    <h2>Research → brief → demo → asset.</h2>
                     <p>
-                        I like marketing that shows the mechanism. Screenshots, workflows, docs, logs, architecture, limitations, and the actual reason a developer should care.
+                        I like marketing that shows the product clearly: what it does, where it fits, and why a technical buyer should care.
                     </p>
                 </div>
                 <div className="note-card">
                     <h3>Ways I can help</h3>
                     <ul>
-                        <li>Turn devtool workflows into clearer demos and launch narratives.</li>
-                        <li>Map AI SRE products into useful practitioner analysis.</li>
-                        <li>Build agent-assisted PMM workflows that leave receipts.</li>
-                        <li>Explain complex Kubernetes and SRE topics without fluff.</li>
+                        <li>Turn devtool workflows into clear demos and launch narratives.</li>
+                        <li>Write developer-facing product stories that stay technically honest.</li>
+                        <li>Translate open-source work into practical adoption content.</li>
+                        <li>Explain Kubernetes, SRE, and AI infrastructure without fluff.</li>
                     </ul>
                 </div>
             </section>
@@ -144,8 +144,8 @@ export default function Home() {
             <section className="section-block">
                 <div className="section-heading compact-heading">
                     <p className="eyebrow">Selected work</p>
-                    <h2>Click into the context, not just the repo.</h2>
-                    <p>Some projects are private or experimental, so these pages explain what the project is, what changed, and what can be safely shown.</p>
+                    <h2>Selected work and experiments.</h2>
+                    <p>A few projects, talks, writing, and experiment outputs.</p>
                 </div>
                 <div className="project-list editorial-list">
                     {caseStudies.map((project, index) => (

@@ -30,31 +30,31 @@ export default function WorkDetail({ params }) {
                     <h1>{study.title}</h1>
                     <p className="hero-lede">{study.summary}</p>
                     <div className="hero-actions">
-                        {study.external && <a className="secondary-button" href={study.external} target="_blank" rel="noopener noreferrer">Public repo</a>}
+                        {study.external && <a className="secondary-button" href={study.external} target="_blank" rel="noopener noreferrer">View repo</a>}
                     </div>
                 </div>
                 <aside className="case-meta-card">
                     <span>{study.year}</span>
                     <strong>{study.status}</strong>
-                    <p>{study.safeNote}</p>
+                    <p>{study.note}</p>
                 </aside>
             </section>
 
             <section className="case-two-up">
                 <article className="note-card">
-                    <p className="card-kicker">Why this exists</p>
+                    <p className="card-kicker">What it is</p>
                     <h2>{study.problem}</h2>
                 </article>
                 <article className="note-card">
-                    <p className="card-kicker">What changed</p>
+                    <p className="card-kicker">What it shows</p>
                     <h2>{study.outcome}</h2>
                 </article>
             </section>
 
             <section className="section-block">
                 <div className="section-heading compact-heading">
-                    <p className="eyebrow">Receipts</p>
-                    <h2>Useful signals without leaking private work.</h2>
+                    <p className="eyebrow">Highlights</p>
+                    <h2>Quick signals.</h2>
                 </div>
                 <div className="metric-grid">
                     {study.metrics.map((metric) => <span key={metric}>{metric}</span>)}
@@ -65,13 +65,16 @@ export default function WorkDetail({ params }) {
                 <section className="section-block">
                     <div className="section-heading compact-heading">
                         <p className="eyebrow">Experiment gallery</p>
-                        <h2>Before, middle, recent.</h2>
-                        <p>These are sanitized contact sheets from public-facing devtool PMM experiments. They show the output shape, not private prompts or internal files.</p>
+                        <h2>v1 experiments → recent outputs.</h2>
+                        <p>Click any image to open the full-size experiment sheet.</p>
                     </div>
                     <div className="gallery-grid">
                         {study.gallery.map((image) => (
                             <figure className="gallery-card" key={image.src}>
-                                <Image src={image.src} alt={image.alt} width={1100} height={720} className="gallery-image" />
+                                <a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size image: ${image.alt}`}>
+                                    {image.version && <span className="version-badge">{image.version}</span>}
+                                    <Image src={image.src} alt={image.alt} width={1100} height={720} className="gallery-image" />
+                                </a>
                                 <figcaption>{image.caption}</figcaption>
                             </figure>
                         ))}
@@ -82,8 +85,8 @@ export default function WorkDetail({ params }) {
             <section className="section-block split-section">
                 <div>
                     <p className="eyebrow">Workflow</p>
-                    <h2>How the work actually happens.</h2>
-                    <p>Simple public explanation. Enough context for someone to understand the project without opening a private repo.</p>
+                    <h2>Process.</h2>
+                    <p>Short version of the workflow behind the outputs.</p>
                 </div>
                 <div className="proof-list">
                     {study.process.map((step, index) => (

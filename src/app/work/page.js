@@ -2,12 +2,14 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { FaMicrophone, FaNewspaper, FaLightbulb, FaYoutube, FaCodeBranch, FaChartLine, FaRobot } from 'react-icons/fa';
+import { FaMicrophone, FaNewspaper, FaLightbulb, FaYoutube, FaCodeBranch, FaChartLine, FaRobot, FaCode, FaBoxesStacked } from 'react-icons/fa6';
 import { archiveItems, categories } from '../../data/work';
 
 const categoryIcons = {
     all: FaLightbulb,
+    'dev-marketing': FaCode,
     pmm: FaChartLine,
+    oss: FaBoxesStacked,
     'ai-sre': FaRobot,
     'agent-labs': FaCodeBranch,
     blogs: FaNewspaper,
@@ -61,7 +63,7 @@ export default function Work() {
             <div className="work-header">
                 <p className="eyebrow">Portfolio archive</p>
                 <h1>Work</h1>
-                <p>Search the useful stuff: product marketing experiments, AI SRE research, agent labs, talks, videos, and writing. Private experiments open into safe public case-study pages instead of dead repo links.</p>
+                <p>Search developer marketing work, product marketing experiments, open-source projects, AI SRE research, talks, videos, and writing.</p>
             </div>
 
             <div className="work-toolbar" aria-label="Work filters">
@@ -77,7 +79,7 @@ export default function Work() {
 
             <div className="categories-tabs">
                 {categories.map((category) => {
-                    const Icon = categoryIcons[category.id];
+                    const Icon = categoryIcons[category.id] || FaLightbulb;
                     return (
                         <button key={category.id} className={`category-tab ${activeCategory === category.id ? 'active' : ''}`} onClick={() => setActiveCategory(category.id)} type="button">
                             <Icon className="category-icon" />

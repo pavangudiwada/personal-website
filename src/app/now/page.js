@@ -1,14 +1,13 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 
 const focus = [
-    { title: 'Hermes content series', body: 'Turning the first week of Hermes usage into LinkedIn posts, videos, architecture explainers, and design case studies.' },
-    { title: 'Design-agent workflow', body: 'Using Mobbin, Pencil, Refactoring UI rules, and critique loops to make useful PMM assets for real devtools.' },
-    { title: 'AI SRE Watchlist', body: 'Keeping the research engine useful for practitioners while it supports website, newsletter, and content ideas.' },
-    { title: 'Personal knowledge system', body: 'Skills, Obsidian, private repos, memory, and Kanban tasks. Useful context should survive a chat window.' }
+    { title: 'Developer marketing', body: 'Demos, launches, teardown briefs, and technical content for devtools and infrastructure products.' },
+    { title: 'Product marketing', body: 'Positioning and messaging work for technical teams, with proof objects instead of vague claims.' },
+    { title: 'Open source', body: 'AI SRE, DevOps, Kubernetes, talks, guides, and community work.' },
+    { title: 'Experiment gallery', body: 'Design and marketing experiments that show the actual output.' }
 ];
 
-const stack = ['Hermes', 'WhatsApp', 'Obsidian', 'GitHub', 'Mobbin', 'Pencil', 'Kanban', 'Mac sync'];
+const stack = ['Developer marketing', 'Product marketing', 'Open source', 'DevTools', 'AI SRE', 'Kubernetes', 'Demos', 'Technical content'];
 
 export default function NowPage() {
     return (
@@ -16,7 +15,7 @@ export default function NowPage() {
             <section className="work-header">
                 <p className="eyebrow">Now</p>
                 <h1>Current focus</h1>
-                <p>A lightweight snapshot of what I'm building and learning right now. Better than a static bio because the work keeps moving.</p>
+                <p>A lightweight snapshot of the areas I am focused on right now.</p>
             </section>
 
             <section className="proof-list">
@@ -35,7 +34,7 @@ export default function NowPage() {
                 <div>
                     <p className="eyebrow">Operating stack</p>
                     <h2>The site should show the work, not just describe it.</h2>
-                    <p>These are the tools and workflows currently shaping the public work. Some are stable, some are messy experiments.</p>
+                    <p>The site should make the work easy to understand without turning it into a brag page.</p>
                 </div>
                 <div className="tag-cloud">
                     {stack.map((item) => <span key={item}>{item}</span>)}
@@ -44,7 +43,7 @@ export default function NowPage() {
 
             <section className="note-card wide-card">
                 <h3>Want to collaborate?</h3>
-                <p>Best fit: devtool product storytelling, proof-led demos, technical content, AI SRE research, and practical agent workflows.</p>
+                <p>Best fit: developer marketing, product marketing for devtools, open-source storytelling, technical content, and AI SRE research.</p>
                 <Link href="/contact" className="primary-button">Contact</Link>
             </section>
         </main>

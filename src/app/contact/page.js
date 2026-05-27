@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa6';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const routes = [
-    { label: 'Developer marketing / PMM', detail: 'Positioning, launch assets, technical demos, teardown-style content.' },
-    { label: 'AI SRE research', detail: 'Vendor maps, buyer questions, practitioner analysis, content series.' },
-    { label: 'Talks and workshops', detail: 'AI SRE, Kubernetes, DevOps, Prometheus, practical agent workflows.' }
+    { label: 'Developer marketing', detail: 'Demos, launch assets, docs-adjacent content, teardown-style stories.' },
+    { label: 'Product marketing', detail: 'Positioning, messaging, proof-led assets, technical launch narratives.' },
+    { label: 'Open source and AI SRE', detail: 'OSS storytelling, Kubernetes, DevOps, Prometheus, practitioner research.' }
 ];
 
 const socialLinks = [
@@ -23,7 +23,7 @@ export default function Contact() {
                 <Image src="/images/pavangudiwada_pfp.webp" alt="Pavan Gudiwada" className="avatar" width={112} height={112} />
                 <p className="eyebrow">Contact</p>
                 <h1>Work with me</h1>
-                <p>Reach out if you need practical developer marketing, AI SRE research, technical storytelling, or agent workflow experiments.</p>
+                <p>Reach out if you need developer marketing, product marketing for devtools, open-source storytelling, AI SRE research, or technical content.</p>
                 <div className="social-links contact-socials">
                     {socialLinks.map(({ icon: Icon, url, label }) => (
                         <a key={label} href={url} target="_blank" rel="noopener noreferrer" title={label} aria-label={label}>

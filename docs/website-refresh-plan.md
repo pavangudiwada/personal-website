@@ -1,70 +1,42 @@
 # Personal website refresh plan
 
-## Current state
+## What changed after review
 
-The site was framed as "Tech, Open Source and DevRel" with a simple home page, Work page, and Contact page.
-That undersells Pavan's current lane: product marketing / developer marketing, AI SRE research, Hermes and agent experiments, Watchlist, portfolio, posts, and videos.
+The existing `refresh/current-positioning-2026` branch had the right strategic direction, but the design language felt like a common Claude Code portfolio: oversized warm hero, generic cards, gradient background, and vague polish.
 
-## Recommended positioning
+This update keeps the useful positioning and makes the site more functional.
 
-Primary line:
+## Mobbin references used
 
-> Product marketing · AI SRE · agent experiments
+Queried Mobbin for clean personal portfolio, projects, work filters, creator/developer portfolio patterns.
 
-Supporting message:
+Useful patterns extracted:
 
-> Pavan works at the intersection of developer marketing, AI SRE, and agentic workflows. Current focus: helping technical products explain what they do with real proof, useful demos, and practitioner-level clarity.
+- Contra portfolio: oversized editorial project list, project numbers, image/label rhythm, more personality than a card grid.
+- Cosmos profile: simple profile header, collections, sort/search controls, minimal dark interface.
+- Lovable discover UI: obvious filters, search, tabs, and fast scanning.
 
-Why this works:
+Anti-copy rule: these were used as structure inspiration only. No screen was cloned.
 
-- Product marketing / dev marketing becomes the center.
-- AI SRE remains credibility and category research, not the entire identity.
-- Hermes and agent experiments become a visible proof loop.
-- It avoids generic portfolio copy.
+## Design direction
 
-## Recommended IA
+- Simpler, more editorial, less SaaS hero.
+- Functional controls before decoration.
+- Keep Pavan's positioning current: product marketing, AI SRE, agent workflows.
+- Show active proof loops instead of pretending the site is a finished static portfolio.
 
-1. Home
-   - Current positioning
-   - Proof cards for current work, AI SRE Watchlist, and agent lab
-   - Hermes series content hooks
-   - Featured projects
+## Useful features added
 
-2. Work
-   - Filterable portfolio by PMM, AI SRE, Agent Labs, Blogs, Videos, Talks
-   - Keep older Kubernetes/SRE proof, but lead with newer PMM/agent/AI SRE work
+- `/now` page for current focus and active work.
+- Searchable Work page.
+- Work category counts.
+- Status labels for active, building, and published work.
+- Clearer contact routes for PMM, AI SRE research, and talks/workshops.
+- Home page reframed around current proof loops and selected work.
 
-3. Notes or Posts
-   - Short proof-led breakdowns from Hermes experiments
-   - Examples:
-     - I used Hermes to audit my own website
-     - AI agents for developer marketing
-     - What AI SRE tools actually prove
-     - How I turn devtool docs into demos
+## Next useful features
 
-4. Contact
-   - Simple collaboration routes
-   - Developer marketing, devtool product storytelling, AI SRE research, talks, and agent workflows
-
-## Content hooks from Hermes series
-
-- "I used Hermes to audit my own website"
-- "AI agents for developer marketing"
-- "What AI SRE tools actually prove"
-- "How I turn devtool docs into demos"
-- "Building a personal operating system with agents"
-- "From devtool docs to proof-led PMM assets"
-
-## Implemented in this PR
-
-- Refreshed homepage around current positioning.
-- Added proof-led sections for PMM, Watchlist, and Hermes/agent experiments.
-- Reworked Work page categories to foreground PMM, AI SRE, and Agent Labs.
-- Updated metadata and contact copy.
-- Replaced minimal styling with warmer editorial portfolio styling.
-
-## Next follow-up
-
-- Add a real Posts or Notes route once Pavan has 3-5 Hermes series drafts ready.
-- Add screenshots or thumbnails for Design Agent Lab outputs.
-- Add a dedicated Watchlist landing page if `awesome-ai-sre` becomes a public content engine beyond GitHub.
+- Add a real Notes route after 3-5 Hermes posts exist.
+- Add thumbnails for Design Agent Lab outputs once public assets are ready.
+- Add RSS or simple JSON-backed posts only when publishing cadence exists.
+- Add project detail pages only for projects with enough proof to deserve them.

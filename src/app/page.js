@@ -1,144 +1,110 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaGithub, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const socialLinks = [
+    { name: 'GitHub', url: 'https://github.com/pavangudiwada', icon: FaGithub },
+    { name: 'YouTube', url: 'https://youtube.com/@pavangudiwada_', icon: FaYoutube },
+    { name: 'X', url: 'https://twitter.com/pavangudiwada_', icon: FaXTwitter },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/pavangudiwada', icon: FaLinkedin }
+];
+
+const proofLoops = [
     {
-        name: 'GitHub',
-        url: 'https://github.com/pavangudiwada',
-        icon: FaGithub
+        number: '01',
+        title: 'Devtool PMM',
+        body: 'I turn technical products into proof-led positioning, demos, launch assets, and useful content.',
+        meta: 'Technical PMM · devtools · demos'
     },
     {
-        name: 'YouTube',
-        url: 'https://youtube.com/@pavangudiwada_',
-        icon: FaYoutube
+        number: '02',
+        title: 'AI SRE Watchlist',
+        body: 'Tracking what is shipping across RCA, incident response, alert triage, and autonomous reliability tools.',
+        meta: '60+ tools · research · analysis'
     },
     {
-        name: 'X',
-        url: 'https://twitter.com/pavangudiwada_',
-        icon: FaXTwitter
-    },
-    {
-        name: 'LinkedIn',
-        url: 'https://linkedin.com/in/pavangudiwada',
-        icon: FaLinkedin
+        number: '03',
+        title: 'Agent experiments',
+        body: 'Building a personal operating layer with Hermes, Obsidian, skills, MCP tools, and design-agent workflows.',
+        meta: 'Hermes · Mobbin · Pencil · Obsidian'
     }
 ];
 
-const focusAreas = [
-    'Product marketing for devtools and technical SaaS',
-    'AI SRE research, vendor tracking, and practical category analysis',
-    'Hermes and agent experiments for content, GTM, and operator workflows'
-];
-
-const proofCards = [
-    {
-        label: 'Current work',
-        title: 'Developer marketing and product storytelling',
-        body: 'I help turn technical products into proof-led demos, content, positioning, and launch assets that developers can actually trust.'
-    },
-    {
-        label: 'Research loop',
-        title: 'AI SRE Watchlist',
-        body: 'Tracking tools for RCA, incident response, Kubernetes alerts, on-call workflows, cost, and infrastructure automation.'
-    },
-    {
-        label: 'Agent lab',
-        title: 'Hermes-powered operating system',
-        body: 'Using agents to research tools, create PMM assets, write briefs, run experiments, and keep useful context connected.'
-    }
-];
-
-const featuredProjects = [
+const featured = [
     {
         title: 'AI SRE Watchlist',
-        description: 'A practical map of AI SRE products and OSS tools across RCA, alert triage, incident response, and infra automation.',
-        href: 'https://github.com/pavangudiwada/awesome-ai-sre'
+        label: 'Research engine',
+        href: 'https://github.com/pavangudiwada/awesome-ai-sre',
+        body: 'A practical map of AI SRE products and OSS tools across RCA, alert triage, incident response, infra automation, and cost.'
     },
     {
         title: 'Design Agent Lab',
-        description: 'Experiments turning real devtool workflows into credible product marketing visuals, demos, critiques, and reusable agent skills.',
-        href: 'https://github.com/pavangudiwada/design-agent-lab'
+        label: 'PMM lab',
+        href: 'https://github.com/pavangudiwada/design-agent-lab',
+        body: 'Experiments that turn real devtool workflows into screenshots, critiques, demo concepts, thumbnails, and reusable agent skills.'
     },
     {
-        title: 'HolmesGPT',
-        description: 'Open source AI SRE work around Kubernetes alerts, investigations, correlations, and on-call troubleshooting.',
-        href: 'https://github.com/pavangudiwada/holmesgpt'
+        title: 'Hermes setup',
+        label: 'Personal OS',
+        href: '/now',
+        body: 'A WhatsApp-first agent workspace connected to memory, skills, Obsidian, GitHub, local machines, and project queues.'
     }
 ];
 
 export default function Home() {
     return (
         <main className="site-shell">
-            <section className="hero-section">
-                <div className="hero-copy">
-                    <p className="eyebrow">Product marketing · AI SRE · agent experiments</p>
+            <section className="profile-hero">
+                <div className="hero-left">
+                    <p className="eyebrow">Product marketing · AI SRE · agent workflows</p>
                     <h1>Pavan Gudiwada</h1>
                     <p className="hero-lede">
-                        I work at the intersection of developer marketing, AI SRE, and agentic workflows.
-                        Current focus: helping technical products explain what they do with real proof, useful demos, and practitioner-level clarity.
+                        I work on developer marketing, AI SRE research, and agent-assisted workflows. The common thread is simple: explain technical products with real proof, useful demos, and practitioner-level clarity.
                     </p>
-                    <div className="focus-list" aria-label="Current focus areas">
-                        {focusAreas.map((item) => (
-                            <span key={item}>{item}</span>
-                        ))}
-                    </div>
                     <div className="hero-actions">
-                        <Link href="/work" className="primary-button">
-                            See work
-                        </Link>
-                        <Link href="/contact" className="secondary-button">
-                            Contact
-                        </Link>
+                        <Link href="/work" className="primary-button">Browse work</Link>
+                        <Link href="/now" className="secondary-button">Current focus</Link>
                     </div>
-                    <div className="social-links hero-socials">
+                </div>
+                <aside className="identity-card" aria-label="Profile summary">
+                    <Image
+                        src="/images/pavangudiwada_pfp.webp"
+                        alt="Pavan Gudiwada"
+                        width={112}
+                        height={112}
+                        className="avatar"
+                        priority
+                    />
+                    <div>
+                        <p className="card-kicker">Available for</p>
+                        <h2>Devtool product storytelling</h2>
+                        <p>Positioning, proof-led demos, launch narratives, AI SRE research, and agent workflow experiments.</p>
+                    </div>
+                    <div className="social-links">
                         {socialLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-link"
-                                title={link.name}
-                                aria-label={link.name}
-                            >
-                                <link.icon className="social-icon" suppressHydrationWarning />
+                            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name} title={link.name}>
+                                <link.icon suppressHydrationWarning />
                             </a>
                         ))}
                     </div>
-                </div>
-                <div className="hero-card" aria-label="Profile summary">
-                    <div className="profile-image-container compact">
-                        <Image
-                            src="/images/pavangudiwada_pfp.webp"
-                            alt="Pavan Gudiwada"
-                            className="profile-image"
-                            width={300}
-                            height={300}
-                            priority
-                        />
-                    </div>
-                    <p className="card-kicker">Positioning</p>
-                    <h2>Practitioner-builder for devtools GTM</h2>
-                    <p>
-                        PMM by output, engineer by taste. I care about code, workflows, screenshots, docs, demos, and the trust gap between marketing claims and production use.
-                    </p>
-                </div>
+                </aside>
             </section>
 
             <section className="section-block">
-                <div className="section-heading">
-                    <p className="eyebrow">What this site should make obvious</p>
-                    <h2>Useful proof before polished claims.</h2>
+                <div className="section-heading compact-heading">
+                    <p className="eyebrow">Current proof loops</p>
+                    <h2>Not a portfolio grid. A working system.</h2>
                 </div>
-                <div className="proof-grid">
-                    {proofCards.map((card) => (
-                        <article className="proof-card" key={card.title}>
-                            <p className="card-kicker">{card.label}</p>
-                            <h3>{card.title}</h3>
-                            <p>{card.body}</p>
+                <div className="proof-list">
+                    {proofLoops.map((loop) => (
+                        <article className="proof-row" key={loop.title}>
+                            <span className="row-number">{loop.number}</span>
+                            <div>
+                                <h3>{loop.title}</h3>
+                                <p>{loop.body}</p>
+                            </div>
+                            <span className="row-meta">{loop.meta}</span>
                         </article>
                     ))}
                 </div>
@@ -146,39 +112,38 @@ export default function Home() {
 
             <section className="section-block split-section">
                 <div>
-                    <p className="eyebrow">Content hooks</p>
-                    <h2>Hermes series direction</h2>
+                    <p className="eyebrow">How I work</p>
+                    <h2>Research → brief → proof → asset.</h2>
                     <p>
-                        The next content loop is simple: show how an agentic workspace helps a technical marketer research tools, inspect repos, create briefs, build demos, and keep a durable knowledge base.
-                    </p>
-                    <p>
-                        Good hooks: "I used Hermes to audit my own website", "AI agents for developer marketing", "What AI SRE tools actually prove", and "How I turn devtool docs into demos".
+                        I like marketing that shows the mechanism. Screenshots, workflows, docs, logs, architecture, limitations, and the actual reason a developer should care.
                     </p>
                 </div>
                 <div className="note-card">
-                    <h3>Website IA recommendation</h3>
-                    <ol>
-                        <li>Home: current positioning and proof loops.</li>
-                        <li>Work: PMM, AI SRE, agent labs, talks, writing, videos.</li>
-                        <li>Notes or Posts: short proof-led breakdowns from Hermes experiments.</li>
-                        <li>Contact: simple collaboration routes.</li>
-                    </ol>
+                    <h3>Ways I can help</h3>
+                    <ul>
+                        <li>Turn devtool workflows into clearer demos and launch narratives.</li>
+                        <li>Map AI SRE products into useful practitioner analysis.</li>
+                        <li>Build agent-assisted PMM workflows that leave receipts.</li>
+                        <li>Explain complex Kubernetes and SRE topics without fluff.</li>
+                    </ul>
                 </div>
             </section>
 
             <section className="section-block">
-                <div className="section-heading">
-                    <p className="eyebrow">Selected proof</p>
+                <div className="section-heading compact-heading">
+                    <p className="eyebrow">Selected work</p>
                     <h2>Projects to build around now</h2>
                 </div>
-                <div className="project-list">
-                    {featuredProjects.map((project) => (
-                        <a className="project-row" href={project.href} key={project.title} target="_blank" rel="noopener noreferrer">
+                <div className="project-list editorial-list">
+                    {featured.map((project, index) => (
+                        <a className="project-row" href={project.href} key={project.title} target={project.href.startsWith('http') ? '_blank' : undefined} rel={project.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                            <span className="row-number">0{index + 1}</span>
                             <div>
+                                <p className="card-kicker">{project.label}</p>
                                 <h3>{project.title}</h3>
-                                <p>{project.description}</p>
+                                <p>{project.body}</p>
                             </div>
-                            <span>Open →</span>
+                            <span className="open-arrow">Open →</span>
                         </a>
                     ))}
                 </div>

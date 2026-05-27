@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaGithub, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { SiAnthropic, SiClaude, SiGithub, SiGooglechrome, SiNextdotjs, SiNodedotjs, SiNotion, SiObsidian, SiOpenai, SiReact, SiTypescript, SiVercel, SiYoutube } from 'react-icons/si';
+import { caseStudies } from '../data/work';
 
 const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/pavangudiwada', icon: FaGithub },
@@ -31,24 +33,34 @@ const proofLoops = [
     }
 ];
 
-const featured = [
+const toolGroups = [
     {
-        title: 'AI SRE Watchlist',
-        label: 'Research engine',
-        href: 'https://github.com/pavangudiwada/awesome-ai-sre',
-        body: 'A practical map of AI SRE products and OSS tools across RCA, alert triage, incident response, infra automation, and cost.'
+        title: 'Agent workbench',
+        tools: [
+            { name: 'Claude', icon: SiClaude },
+            { name: 'OpenAI / ChatGPT / Codex', icon: SiOpenai },
+            { name: 'Anthropic', icon: SiAnthropic },
+            { name: 'GitHub', icon: SiGithub }
+        ]
     },
     {
-        title: 'Design Agent Lab',
-        label: 'PMM lab',
-        href: 'https://github.com/pavangudiwada/design-agent-lab',
-        body: 'Experiments that turn real devtool workflows into screenshots, critiques, demo concepts, thumbnails, and reusable agent skills.'
+        title: 'Knowledge and research',
+        tools: [
+            { name: 'Obsidian', icon: SiObsidian },
+            { name: 'Notion', icon: SiNotion },
+            { name: 'YouTube', icon: SiYoutube },
+            { name: 'Chrome', icon: SiGooglechrome }
+        ]
     },
     {
-        title: 'Hermes setup',
-        label: 'Personal OS',
-        href: '/now',
-        body: 'A WhatsApp-first agent workspace connected to memory, skills, Obsidian, GitHub, local machines, and project queues.'
+        title: 'Website and automation',
+        tools: [
+            { name: 'Node.js', icon: SiNodedotjs },
+            { name: 'Next.js', icon: SiNextdotjs },
+            { name: 'React', icon: SiReact },
+            { name: 'TypeScript', icon: SiTypescript },
+            { name: 'Vercel', icon: SiVercel }
+        ]
     }
 ];
 
@@ -132,19 +144,42 @@ export default function Home() {
             <section className="section-block">
                 <div className="section-heading compact-heading">
                     <p className="eyebrow">Selected work</p>
-                    <h2>Projects to build around now</h2>
+                    <h2>Click into the context, not just the repo.</h2>
+                    <p>Some projects are private or experimental, so these pages explain what the project is, what changed, and what can be safely shown.</p>
                 </div>
                 <div className="project-list editorial-list">
-                    {featured.map((project, index) => (
-                        <a className="project-row" href={project.href} key={project.title} target={project.href.startsWith('http') ? '_blank' : undefined} rel={project.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    {caseStudies.map((project, index) => (
+                        <Link className="project-row" href={project.href} key={project.title}>
                             <span className="row-number">0{index + 1}</span>
                             <div>
                                 <p className="card-kicker">{project.label}</p>
                                 <h3>{project.title}</h3>
-                                <p>{project.body}</p>
+                                <p>{project.summary}</p>
                             </div>
                             <span className="open-arrow">Open →</span>
-                        </a>
+                        </Link>
+                    ))}
+                </div>
+            </section>
+
+            <section className="section-block tool-section">
+                <div className="section-heading compact-heading">
+                    <p className="eyebrow">Tool stack</p>
+                    <h2>The tools behind the work.</h2>
+                    <p>Grouped by how they show up in the workflow. Logos first, names available for accessibility and hover.</p>
+                </div>
+                <div className="tool-groups">
+                    {toolGroups.map((group) => (
+                        <article className="tool-group" key={group.title}>
+                            <h3>{group.title}</h3>
+                            <div className="logo-grid">
+                                {group.tools.map((tool) => (
+                                    <span className="logo-tile" key={tool.name} title={tool.name} aria-label={tool.name}>
+                                        <tool.icon suppressHydrationWarning />
+                                    </span>
+                                ))}
+                            </div>
+                        </article>
                     ))}
                 </div>
             </section>

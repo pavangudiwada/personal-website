@@ -14,14 +14,14 @@ export const caseStudies = [
     {
         slug: 'design-agent-lab',
         title: 'Design Agent Lab',
-        label: 'Experiment gallery',
+        label: 'Devtool PMM teardown lab',
         category: 'dev-marketing',
         year: '2026',
         status: 'active',
-        summary: 'A simple gallery of developer-marketing design experiments for real devtool workflows.',
-        problem: 'Early experiments explored how to turn a product workflow into a clearer marketing asset.',
-        outcome: 'The gallery shows the visual progression: v1 sheets, stronger mid-runs, and recent outputs with better hierarchy and proof.',
-        note: 'Experiment outputs.',
+        summary: 'One workflow for devtool product-marketing teardowns: research, brief, proof, design directions, and asset QA.',
+        problem: 'Devtool PMM work gets weak when teardown, positioning, and design are treated as separate artifacts instead of one proof-led loop.',
+        outcome: 'The gallery shows that loop in practice: source workflow → positioning angle → visual asset → QA pass.',
+        note: 'Teardown and design workflow.',
         href: '/work/design-agent-lab',
         external: 'https://github.com/pavangudiwada/design-agent-lab',
         metrics: ['v1 contact sheets', 'desktop + social variants', 'recent QA contact sheets'],
@@ -83,7 +83,6 @@ export const caseStudies = [
 
 export const archiveItems = [
     ...caseStudies,
-    { title: 'Devtool product marketing teardown workflow', summary: 'A repeatable research to brief to asset loop for technical SaaS: mechanism, proof, workflow, limitation, and CTA.', category: 'dev-marketing', year: '2026', status: 'building', href: '/work/design-agent-lab' },
     { title: 'Managing Alerts at Scale: Practical Tips to Reduce Alert Fatigue', summary: 'Talk at CNCF Lucknow about managing Prometheus alerts at scale and reducing alert noise.', category: 'talks', year: '2025', status: 'published', href: 'https://x.com/cncglucknow/status/1927261542304686226' },
     { title: 'Building your DevOps co-pilot using HolmesGPT', summary: 'FSMK DevDays talk on building a practical DevOps co-pilot with open source AI.', category: 'talks', year: '2025', status: 'published', href: 'https://www.linkedin.com/posts/pavangudiwada_fsmkdevdays-freesoftware-opensource-activity-7285328874886901760-ZV9i' },
     { title: 'Open source AI agents', summary: 'CNCF Ahmedabad talk about open source AI agents for DevOps and infrastructure workflows.', category: 'talks', year: '2025', status: 'published', href: 'https://www.linkedin.com/posts/pavangudiwada_had-a-great-time-attending-and-speaking-at-activity-7276158792235409408-rtty' },

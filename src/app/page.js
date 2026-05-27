@@ -23,7 +23,7 @@ const proofLoops = [
         number: '02',
         title: 'Product marketing',
         body: 'Positioning, messaging, proof assets, and launch narratives for technical products.',
-        meta: 'Technical PMM · PMM · GTM'
+        meta: 'PMM · GTM · launches'
     },
     {
         number: '03',
@@ -35,16 +35,16 @@ const proofLoops = [
 
 const toolGroups = [
     {
-        title: 'Agent workbench',
+        title: 'Workbench',
         tools: [
             { name: 'Claude', icon: SiClaude },
-            { name: 'OpenAI / ChatGPT / Codex', icon: SiOpenai },
+            { name: 'OpenAI', icon: SiOpenai },
             { name: 'Anthropic', icon: SiAnthropic },
             { name: 'GitHub', icon: SiGithub }
         ]
     },
     {
-        title: 'Knowledge and research',
+        title: 'Knowledge + research',
         tools: [
             { name: 'Obsidian', icon: SiObsidian },
             { name: 'Notion', icon: SiNotion },
@@ -53,7 +53,7 @@ const toolGroups = [
         ]
     },
     {
-        title: 'Website and automation',
+        title: 'Web + automation',
         tools: [
             { name: 'Node.js', icon: SiNodedotjs },
             { name: 'Next.js', icon: SiNextdotjs },
@@ -166,7 +166,7 @@ export default function Home() {
                 <div className="section-heading compact-heading">
                     <p className="eyebrow">Tool stack</p>
                     <h2>The tools behind the work.</h2>
-                    <p>Grouped by how they show up in the workflow. Logos first, names available for accessibility and hover.</p>
+                    <p>Grouped by how they show up in the workflow. Logos stay visible; names stay readable.</p>
                 </div>
                 <div className="tool-groups">
                     {toolGroups.map((group) => (
@@ -176,6 +176,7 @@ export default function Home() {
                                 {group.tools.map((tool) => (
                                     <span className="logo-tile" key={tool.name} title={tool.name} aria-label={tool.name}>
                                         <tool.icon suppressHydrationWarning />
+                                        <span>{tool.name}</span>
                                     </span>
                                 ))}
                             </div>

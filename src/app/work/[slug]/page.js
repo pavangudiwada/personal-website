@@ -7,8 +7,9 @@ export function generateStaticParams() {
     return caseStudies.map((study) => ({ slug: study.slug }));
 }
 
-export function generateMetadata({ params }) {
-    const study = caseStudies.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const study = caseStudies.find((item) => item.slug === slug);
     if (!study) return {};
     return {
         title: `${study.title} | Pavan Gudiwada`,
@@ -16,8 +17,9 @@ export function generateMetadata({ params }) {
     };
 }
 
-export default function WorkDetail({ params }) {
-    const study = caseStudies.find((item) => item.slug === params.slug);
+export default async function WorkDetail({ params }) {
+    const { slug } = await params;
+    const study = caseStudies.find((item) => item.slug === slug);
     if (!study) notFound();
 
     return (

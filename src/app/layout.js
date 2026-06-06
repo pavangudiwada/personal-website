@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
-    title: 'Pavan Gudiwada',
-    description: 'Personal website of Pavan Gudiwada - Tech, Open Source and DevRel',
+    title: 'Pavan Gudiwada | Developer Marketing, Product Marketing, Open Source',
+    description: 'Personal website of Pavan Gudiwada: developer marketing, product marketing for devtools, open source, AI SRE research, talks, writing, and videos.',
     icons: {
         icon: '/favicon.ico',
     },
@@ -20,4 +20,4 @@ export default function RootLayout({ children }) {
             </body>
         </html>
     );
-} 
+}

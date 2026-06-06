@@ -1,67 +1,46 @@
-'use client';
+import Image from 'next/image';
+import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa6';
+import { FaXTwitter } from 'react-icons/fa6';
 
-import { FaGithub, FaXTwitter, FaLinkedin, FaYoutube, FaEnvelope } from 'react-icons/fa6';
-
-const links = [
-    { label: 'Personal Website', url: 'https://pavangudiwada.com' },
-    { label: 'Twitter (X)', url: 'https://twitter.com/pavangudiwada_' },
-    { label: 'Blog', url: 'https://pavangudiwada.hashnode.dev' },
+const routes = [
+    { label: 'Developer marketing', detail: 'Demos, launch assets, docs-adjacent content, teardown-style stories.' },
+    { label: 'Product marketing', detail: 'Positioning, messaging, proof-led assets, technical launch narratives.' },
+    { label: 'Open source and AI SRE', detail: 'OSS storytelling, Kubernetes, DevOps, Prometheus, practitioner research.' }
 ];
 
 const socialLinks = [
     { icon: FaGithub, url: 'https://github.com/pavangudiwada', label: 'GitHub' },
-    { icon: FaXTwitter, url: 'https://twitter.com/pavangudiwada_', label: 'Twitter (X)' },
+    { icon: FaXTwitter, url: 'https://twitter.com/pavangudiwada_', label: 'X' },
     { icon: FaLinkedin, url: 'https://linkedin.com/in/pavangudiwada', label: 'LinkedIn' },
     { icon: FaYoutube, url: 'https://youtube.com/@pavangudiwada_', label: 'YouTube' },
-    { icon: FaEnvelope, url: 'mailto:pavangudiwada@pm.me', label: 'Email' },
+    { icon: FaEnvelope, url: 'mailto:pavangudiwada@pm.me', label: 'Email' }
 ];
 
 export default function Contact() {
     return (
-        <div className="contact-container" style={{ maxWidth: 600, margin: '0 auto', padding: '2rem 1rem', textAlign: 'center', marginTop: '70px' }}>
-            <img
-                src="/images/pavangudiwada_pfp.webp"
-                alt="Pavan Gudiwada"
-                className="profile-image"
-                style={{ width: 120, height: 120, borderRadius: '50%', margin: '0 auto 1rem', objectFit: 'cover' }}
-            />
-            <h2 style={{ fontWeight: 700, fontSize: '2rem', marginBottom: 0 }}>
-                Pavan Gudiwada
-            </h2>
-            <div style={{ color: '#222', margin: '0.5rem 0 1.5rem', fontSize: '1.1rem' }}>
-                Tech, Open Source, and DevRel
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-                {socialLinks.map(({ icon: Icon, url, label }) => (
-                    <a key={label} href={url} target="_blank" rel="noopener noreferrer" title={label} style={{ color: '#222', fontSize: '2rem' }}>
-                        <Icon />
-                    </a>
+        <main className="contact-container">
+            <section className="contact-card">
+                <Image src="/images/pavangudiwada_pfp.webp" alt="Pavan Gudiwada" className="avatar" width={112} height={112} />
+                <p className="eyebrow">Contact</p>
+                <h1>Work with me</h1>
+                <p>Reach out if you need developer marketing, product marketing for devtools, open-source storytelling, AI SRE research, or technical content.</p>
+                <div className="social-links contact-socials">
+                    {socialLinks.map(({ icon: Icon, url, label }) => (
+                        <a key={label} href={url} target="_blank" rel="noopener noreferrer" title={label} aria-label={label}>
+                            <Icon />
+                        </a>
+                    ))}
+                </div>
+            </section>
+
+            <section className="route-list">
+                {routes.map((route) => (
+                    <article className="proof-card" key={route.label}>
+                        <h3>{route.label}</h3>
+                        <p>{route.detail}</p>
+                    </article>
                 ))}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                {links.map(({ label, url }) => (
-                    <a
-                        key={label}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                            border: '2px solid #222',
-                            borderRadius: '16px',
-                            padding: '1rem',
-                            fontSize: '1.15rem',
-                            color: '#222',
-                            textDecoration: 'none',
-                            fontWeight: 500,
-                            transition: 'background 0.2s, color 0.2s',
-                        }}
-                        onMouseOver={e => { e.currentTarget.style.background = '#f5f5f5'; }}
-                        onMouseOut={e => { e.currentTarget.style.background = 'transparent'; }}
-                    >
-                        {label}
-                    </a>
-                ))}
-            </div>
-        </div>
+            </section>
+        </main>
     );
 }

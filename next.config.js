@@ -14,6 +14,14 @@ const nextConfig = {
             }
         ],
     },
+    async redirects() {
+        return [
+            { source: '/work', destination: '/', permanent: false },
+            { source: '/work/:path*', destination: '/', permanent: false },
+            { source: '/now', destination: '/', permanent: false },
+            { source: '/contact', destination: '/', permanent: false },
+        ]
+    },
 }
 
 module.exports = nextConfig 

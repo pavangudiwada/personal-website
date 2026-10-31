@@ -7,7 +7,7 @@ import { Highlighter } from "@/components/ui/highlighter"
 import { Marquee } from "@/components/ui/marquee"
 import { Terminal, TypingAnimation, AnimatedSpan } from "@/components/ui/terminal"
 import { WordRotate } from "@/components/ui/word-rotate"
-import { TOOLS, type Tool } from "@/lib/tools"
+import { TOOLS, isFileTool, type Tool } from "@/lib/tools"
 
 const Ready = createContext(false)
 
@@ -47,14 +47,17 @@ function Row({ t, d, href = "#" }: { t: string; d: string; href?: string }) {
 }
 
 function ToolMark({ tool }: { tool: Tool }) {
-  if (!tool.icon) {
+  if (isFileTool(tool)) {
     return (
-      <span
+      <Image
+        src={tool.src}
+        alt={tool.title}
         title={tool.title}
-        className="inline-flex h-6 shrink-0 items-center rounded-full border border-[#E8E4E2] bg-white px-2.5 font-sans text-[11px] font-medium leading-none text-[#6B6360]"
-      >
-        {tool.label}
-      </span>
+        width={24}
+        height={24}
+        unoptimized
+        className="size-6 shrink-0 object-contain"
+      />
     )
   }
 
@@ -66,10 +69,53 @@ function ToolMark({ tool }: { tool: Tool }) {
       width={24}
       height={24}
       className="size-6 shrink-0"
-      fill="#6B6360"
+      fill={`#${tool.icon.hex}`}
     >
+      <title>{tool.title}</title>
       <path d={tool.icon.path} />
     </svg>
+  )
+}
+
+function QuoteCard({
+  quote,
+  name,
+  title,
+  href,
+  photo,
+}: {
+  quote: string
+  name: string
+  title: string
+  href: string
+  photo: string
+}) {
+  const body = quote.startsWith("“") ? quote.slice(1) : quote
+
+  return (
+    <figure className="quote-card mt-5 rounded-2xl border border-[var(--rule)] bg-white px-5 pt-4 pb-5">
+      <blockquote className="font-serif text-[18px] leading-[1.6] italic text-[var(--ink)] sm:text-[19px]">
+        <span aria-hidden="true" className="mr-1 inline-block translate-y-[0.12em] font-serif text-[2.75rem] leading-none text-[#B7014D] not-italic">
+          “
+        </span>
+        {body}
+      </blockquote>
+      <figcaption className="mt-4">
+        <a href={href} aria-label={`${name}, ${title}`} className="flex items-center gap-3">
+          <Image
+            src={photo}
+            alt=""
+            width={80}
+            height={80}
+            className="h-10 w-10 rounded-full object-cover"
+          />
+          <span className="min-w-0 font-sans text-[14px] leading-tight">
+            <span className="quote-name block font-medium text-[var(--ink)]">{name}</span>
+            <span className="mt-0.5 block font-normal text-[var(--muted)]">{title}</span>
+          </span>
+        </a>
+      </figcaption>
+    </figure>
   )
 }
 
@@ -158,14 +204,20 @@ export default function Home() {
           </p>
 
           <SectionTitle>Kind words</SectionTitle>
-          <figure className="border-l-2 pl-5" style={{ borderColor: ACCENT }}>
-            <blockquote className="italic">“He has a natural instinct for product thinking and developer experience. He understands how developers think, what frustrates them, and what makes a tool genuinely useful.”</blockquote>
-            <figcaption className="mt-2 font-sans text-sm text-[var(--muted)]">Natan Yellin, CEO, Robusta</figcaption>
-          </figure>
-          <figure className="mt-8 border-l-2 border-[var(--rule)] pl-5">
-            <blockquote className="italic">“He already had great knowledge but remains keen to both learn and share… he has passion and enthusiasm in equal measure and is a joy to collaborate with.”</blockquote>
-            <figcaption className="mt-2 font-sans text-sm text-[var(--muted)]">Andy Hawkins</figcaption>
-          </figure>
+          <QuoteCard
+            quote="“He has a natural instinct for product thinking and developer experience. He understands how developers think, what frustrates them, and what makes a tool genuinely useful.”"
+            name="Natan Yellin"
+            title="CEO, Robusta.dev"
+            href="https://www.linkedin.com/in/natanyellin"
+            photo="/people/natan-yellin.jpg"
+          />
+          <QuoteCard
+            quote="“He already had great knowledge but remains keen to both learn and share… he has passion and enthusiasm in equal measure and is a joy to collaborate with.”"
+            name="Andy Hawkins"
+            title="CTO, DevOps Solutions"
+            href="https://www.linkedin.com/in/andy-hawkins-306848"
+            photo="/people/andy-hawkins.jpg"
+          />
 
           <SectionTitle>Tools I reach for</SectionTitle>
           <div className="relative">
